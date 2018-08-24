@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenData &gt; Exo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="CEREMA Med &gt; Mathieu Rajerison" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# OpenData &gt; Exo
+## Votre mission, si vous l’acceptez
+### CEREMA Med &gt; Mathieu Rajerison
+### 2018/08/02 (updated: 2018-08-02)
+
+---
+
+# Feuille de route
+L'environnement et notre espace de vie nous intéressent particulièrement.
+
+Afin d'analyser l'état actuel en région PACA, nous allons tenter d'accéder, sur le portail DataSud à différentes données relatives à la **qualité de l'air**, le **bruit** et la **pollution** afin de les analyser.
+
+Voici les différentes données dont nous aurons besoin :
+
+1. Les indicateurs de développement durable sur l'_épanouissement_ des êtres humains
+2. Les _populations exposées_ au dépassement des valeurs de référence des PM10, NO2 et O3 sur la région Sud PACA
+
+Voici les différentes étapes de l'exercice :
+
+1. Dans un premier temps, nous *accèderons* aux données et en *prendrons connaissance*.
+2. Dans un second temps, nous lex *explorerons* afin de répondre à des questions précises
+3. Dans un troisième temps, nous les *visualiserons* à l'aide de graphiques
+4. Dans un quatrième temps, nous prendrons une donnée spatiale que nous *cartographierons*.
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

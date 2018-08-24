@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenData</title>
+    <meta charset="utf-8">
+    <meta name="author" content="CEREMA Med &gt; Mathieu Rajerison" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# OpenData
+## Rdv avec la Data
+### CEREMA Med &gt; Mathieu Rajerison
+### 2018/08/02 (updated: 2018-08-02)
+
+---
+
+
+!! métiers de la donnée
+!! http://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/693/693-isn-opendatadocument-ressource-prof.pdf
+
+
+---
+class: center, middle, inverse
+# Accéder
+
+---
+
+Les données OpenData sont disponibles sur les portails OpenData (ce qui paraît évident).
+
+Elles sont généralement classées par thématiques, mais dans certains cas, on peut aussi y accéder :
+
+- par *producteur* : pour avoir toutes les données créées par le Conseil Départemental des Bouches-du-Rhône, par exemple
+- par *format* : pour n'avoir que des données que l'on sera en mesure d'exploiter dans ses outils du quotidien.
+- par *license* : pour ne retenir que les données que l'on peut exploiter en toute liberté
+- parfois, par l'*emprise géographique* : si on ne veut que les données de son territoire propre
+
+---
+class: center, middle, inverse
+
+# Faire connaissance
+
+---
+## Méta-données
+Quand on clique sur un jeu de données du portail, par exemple [celui-ci sur la localisation des défribrillateurs en Bouches-du-Rhône](https://trouver.datasud.fr/dataset/defibrillateurs-en-region-provence-alpes-cote-dazur), une description plus ou moins longue de la donnée s'affiche sous la forme de texte ou de tableau (voire les deux).
+
+Ces informations sur la donnée, ou données sur la donnée, s'appellent les méta-données.
+
+Elles permettent entre autres de savoir qui a produit la donnée, quand et comment.
+
+Ces informations sont indispensables afin de fiabiliser la source d'une donnée, connaître sa fraîcheur, connaître la license affectée à la donnée, pouvoir contacter le producteur le cas échéant.
+
+[Interview de la donnée]
+
+---
+## Des outils simples et rapides pour faire connaissance
+
+Un certain nombre d'outils permettent d'explorer les données afin d'en évaluer la qualité, et repérer d'éventuelles coquilles, parmi lesquels :
+
+- Excel ou LibreOffice Calc
+- [WTFCSV](https://datajournalism.tools/ddjtool/wtfcsv/) 
+- [CSVLint](http://csvlint.io/)
+
+La qualité  CSVLint, dataorg
+
+![](https://i0.wp.com/datajournalism.tools/wp-content/uploads/WTFcsv.png?w=970&amp;ssl=1)
+
+---
+class: center, middle, inverse
+# Synthétiser la donnée
+---
+## Agréger
+L'agrégation de données consiste à réaliser des opérations : comptage, moyenne, minimum, maximum, somme à des niveaux d'organisation hiérarchique supérieurs, ce qui tend à simplifier l'information en la rendant moins granulaire.
+
+Par exemple, je pourrais vouloir le nombre d'habitants par département à partir de celui par commune ou le revenu médian par commune à partir de celui par quartier.
+
+---
+## Visualiser
+### Infographie
+Les données statistiques sont naturellement difficilement interprétables quand elles sont présentées de façon brute sous forme de tableau. Qui voir fréquemment de grands tableaux dans la partie Économie du journal "Le Monde", par exemple ?
+
+C'est pourquoi il est d'usage de les retranscrire de façon visuelle sous forme de graphiques. Cette pratique s'appelle l'infographie ou Data-visualisation.
+
+Tracer des courbes à partir de séries temporelles, représenter des camemberts ou des diagrammes en barre permet très rapidement de repérer des motifs intéressants dans les données.
+
+Selon le type de données rencontré, on n'utilisera pas forcément le même type de graphiques (voir l'excellent site [Data To Viz](https://www.data-to-viz.com/)) et il existe des façons de représenter la donnée très originales (voir [xeno.graphics](https://xeno.graphics/)).
+
+---
+
+### Cartographie
+Aussi, quand cela est possible, la cartographie permet de voir des dynamiques spatiales à l'oeuvre et de croiser des informations territorialiées par le jeu des superpositions de couches d'informations
+
+[https://blog.mapbox.com/how-i-built-a-wind-map-with-webgl-b63022b5537f]
+
+---
+class: center, middle, inverse
+# Calculer, détecter et prédire
+---
+## Stats
+Les statistiques correspondent à l'emploi de procédures mathématiques appliquées aux données, afin de révéler et valider des motifs souvent difficilement visibles "à l'oeil nu".
+
+--
+
+## Machine learning
+Le machine learning correspond à l'emploi d'algorithmes qui permettent de prédire des valeurs (par exemple dans le futur), voire de classer des données entre elles sur la base de leur ressemblance.
+
+--
+
+## Deep learning
+L'apprentissage profond est une sous-branche du machine learning, qui sous-tend l'intelligence artificielle, se base sur des réseaux de neurones qui miment le fonctionnement du cerveau humain. Il consiste à créer un réseau capable de prédire une valeur après avoir appris depuis une multitude d'expériences et d'échantillons de données.
+
+---
+class: center, middle, inverse
+# A qui la data est-il le dada ?
+---
+class: center, middle
+## Métiers
+
+Une société submergée par des masses d'informations, pour certaines à haute valeur ajoutée, a besoin de personnes sachant s'y retrouver et jongler avec les données. Des métiers commencent à apparaître tournés autour de l'exploitation et la valorisation des données
+
+---
+
+### Data scientist
+Le Data scientist est un profil à la mode qui correspond à des personnes en mesure d'accéder, triturer n'importe quel type de données et d'en révéler certains motifs par le biais de la visualisation ou de la statistique
+
+--
+
+### CDO ou Chief Data Officer
+On connaissait les CEO (Chief Economy Officer) ou CTO (Chief Technical Officer). Les CDO (pour Chief Data Officer) sotn chargés de la politique d'ouverture des données d'une institution. Son rôle est généralement d'animer un réseau de correspondants données, de recenser l'ensemble des données et d'en assurer la diffusion.
+
+Au MTES, ce rôle est assuré par la Superviseure Générale des Données.
+
+--
+
+### Chief Privacy Officer
+Le Chief Privacy Officer, ou chef de la protection des données personnelles, doit garantir la mise en oeuvre du RGPD, soit que les données mises à disposition, ne comportent pas d'informations à caractère sensible et personnel.
+
+---
+class: center, middle
+## Communautés
+---
+### Evènements
+####Les hackathons, data camps
+Les data camps sont des évènements où des personnes intéressées par la Data échangent autour de celles-ci, que ce soit au niveau des méthodes, des types données qui sont intéressantes ou dont il serait intéressant de disposer.
+
+Les hackathons, à dimension plus technique, sont des évènements où des personnes, geeks ou non, se réunissent afin de répondre à certaines questions, problématiques par l'exploration de données ou la création de prototypes applicatifs (POC ou Preuves de Concept)
+
+####Les Carto-parties
+Les carto-parties sont des évènements organisés par des contributeurs OpenStreetMap visant à associer le plus souvent des personnes dee milieu rural à la cartographie de leur commune.
+---
+### Les lieux
+#### Data labs, infolabs
+Les data labs ou info labs sont comparables aux fab labs dans la philosophie sauf qu'on n'y apprend pas à manier des imprimantes laser mais qu'on y échange autour de données ou outils relatifs à celles-ci (extraction, exploration, datavisualisation,...)
+
+---
+### Les forums
+Le forum [teamopendata](https://teamopendata.org/) permet d'échanger virtuellement autour de l'OpenData. On y apprend beaucoup de choses concernant l'actualité liée à l'ouverture des données : évènements, tournants législatifs, revue du web.
+
+C'est le lieu idéal où poser ses questions sur l'OpenData.
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenData &gt; Exo</title>
+    <meta charset="utf-8">
+    <meta name="author" content="CEREMA Med &gt; Mathieu Rajerison" />
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# OpenData &gt; Exo
+## Explorer le terrain
+### CEREMA Med &gt; Mathieu Rajerison
+### 2018/08/02 (updated: 2018-08-02)
+
+---
+
+class: center, middle, inverse
+
+# Opérations de base sous Excel&lt;br&gt;(ou LibreOffice)
+### Rappel de quelques fonctions utiles avant de commencer
+---
+
+!!
+Fixer des colonnes
+moyenne
+max
+trier les données
+
+---
+class: center, middle, inverse
+# Exos
+## Terrain : Indicateurs de développement durable sur l'épanouissement des êtres humains 
+
+.footer-note[
+[cliquez ici pour accéder au dataset des Indicateurs de développement durable sur l'épanouissement"](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
+]
+
+---
+
+##Exo 4
+###Eevue post-téléchargement 
+
+- Combien de fichiers trouve-t-on dans le lot de données ? Sont-ils tous différents ? Combien de jeux de données différents trouve-t-on en réalité ?
+- Dans quel jeu de données retrouve-t-on autant d'informations que citées dans la documentation ? A quel niveau géographique : région, département ?
+- Quel jeu de données comprend des données précises ? Y retrouve-t-on l'intégralité des indicateurs ?&lt;/div&gt;
+
+---
+
+##Exo 5
+###Structure des fichiers 
+
+- Dans le fichier synthese, les variables apparaissent-elles en colonnes ou en lignes ? Et dans les autres Fichiers ?
+- Dans le fichier detail, que signifie à votre avis la valeur *nd* dans l'onglet sur la qualité de l'air ?&lt;/div&gt;
+
+---
+##Exo 6
+###Contenu
+
+- Comment se situe PACA par rapport à la France par rapport à l'exposition au bruit ?
+- Après les Bouches-du-Rhône, dans quel département est-on le plus exposé au bruit ?
+- Classer le communes en fonction de la qualité de l'air en 2012 et dire quelles communes sont les 3 communes les plus polluées et les 3 communes les moins polluées&lt;/div&gt;
+
+---
+class: center, middle, inverse
+
+#Exos
+# Terrain : Populations exposées au dépassement des valeurs de référence des PM10, NO2 et O3
+
+.footer-note[
+[cliquez ici pour accéder au dataset des populations exposées au dépassement des valeurs de référence des PM10, NO2 et O3"](https://trouver.datasud.fr/dataset/indicateurs-communaux-de-qualite-de-lair-en-region-sud-provence-alpes-cote-dazur)
+]
+
+---
+
+##Exo 7
+### Revue des données 
+
+- A quoi correspond ISA ?
+
+---
+##Exo 8
+### Contenu
+
+- Quelle est la moyenne de l'ISA pour la région PACA ?
+- Quelle commune connaît le plus fort ISA ?&lt;/div&gt;
+
+---
+
+Ajouter les informations du fichier d'exposition à la pollution de 2013 au tableau actuel de 2017
+
+##Exo 9
+### Contenu
+
+- Des arrondissements de Marseille ont-ils connu une évolution négative de l'indicateur ISA ?
+- Pour Marseille, quels sont les deux arrondissements qui ont connu la plus forte dégradation de leur qualité de l'air ?
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script>
+(function() {
+  var i, text, code, codes = document.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+})();
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
