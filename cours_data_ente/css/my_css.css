@@ -1,8 +1,3 @@
-.title-slide {
-  background-image: url(images/visuel_transparent.png);
-  background-size: cover;
-}
-
 .title-slide h1, .title-slide h3 {
   color: #F7F8FA;
   font-size: 2em;
@@ -11,4 +6,43 @@
   color: white; 
   line-height: 1.5em;
   font-size: 3.5em;
+}
+
+.date {
+color:red;
+background-color:Beige;
+padding:2px;
+}
+
+.etat {
+color:blue;
+font-size:0.5em;
+}
+
+.citoyens {
+color:darkcyan;
+font-size:0.5em;  
+}
+
+.reference {
+text-align: right;
+font-size: 0.7em;
+}
+
+.exo h2 {
+  color: #862900;
+  border-bottom: 3px solid #862900;
+}
+
+.file {
+  background-color:Beige;
+  /*padding-top:10px;
+  padding-bottom:10px;
+  padding-right:10px;
+  padding-left:10px;*/
+  padding:20px;
+}
+
+li{
+  margin: 10px 0;
 }
