@@ -1,0 +1,28 @@
+---
+title: "Cours sur la Data<br><small>à destination des étudiants de l'ENTE d'Aix-en-Provence<br>(École Nationale des Techniciens de l'Équipement)</small>"
+author: "CEREMA Med > Mathieu Rajerison"
+date: "24 août 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<img src=images/LogoENTE.jpg width=20%></img>
+<img src=images/Logo_CEREMA.png width=20%></img>
+
+## Session 1 (cours) ½j 
+- [Généralités sur la Data](https://datagistips.github.io/cours_data_ente/prez/session1_1_data.html)
+- [Fondements et contexte législatif entourant l'OpenData](https://datagistips.github.io/cours_data_ente/prez/session1_2_fondements.html)
+- [Portails OpenData](https://datagistips.github.io/cours_data_ente/prez/session1_3_portails.html)
+- [Acteurs de l'OpenData](https://datagistips.github.io/cours_data_ente/prez/session1_4_acteurs.html)
+- [Avant de vous présenter à la Data](https://datagistips.github.io/cours_data_ente/prez/session1_5_avant_data.html)
+- [Rendez-vous avec la Data](https://datagistips.github.io/cours_data_ente/prez/session1_6_rdv_data.html)
+
+## Session 2 (travaux pratiques) ½j 
+- [Énoncé du défi](https://datagistips.github.io/cours_data_ente/prez/session2_1_énoncé.html)
+- [Accéder à la donnée et en prendre connaissance](https://datagistips.github.io/cours_data_ente/prez/session2_2_acceder_prendre_connaissance.html)
+- [Explorer](https://datagistips.github.io/cours_data_ente/prez/session2_3_explorer.html)
+- [Visualiser](https://datagistips.github.io/cours_data_ente/prez/session2_4_visualiser.html)
+- [Outils (annexe)](https://datagistips.github.io/cours_data_ente/prez/session2_5_annexe_outils.html)

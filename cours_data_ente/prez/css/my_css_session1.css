@@ -1,5 +1,5 @@
 .title-slide {
-  background-image: url(images/visuel_transparent.png);
+  background-image: url(../images/visuel_sombre_avec_logos.jpeg);
   background-size: cover;
 }
 
@@ -11,4 +11,8 @@
   color: white; 
   line-height: 1.5em;
   font-size: 3.5em;
+}
+
+.inverse {
+  background-color:#00264d;
 }
