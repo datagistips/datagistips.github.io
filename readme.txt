@@ -1,0 +1,1 @@
+il faut mettre un index.html à la racine pour que le site fonctionne
