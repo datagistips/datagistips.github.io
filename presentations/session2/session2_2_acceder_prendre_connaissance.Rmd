@@ -1,0 +1,166 @@
+---
+title: "OpenData (Exos)"
+subtitle: "Accès au terrain et repérages"
+author: "CEREMA Med > Mathieu Rajerison"
+date: "<span style='font-size:0.5em;'>06/02/2019</span>"
+output:
+  xaringan::moon_reader:
+    css: ["../css/my_css.css", "../css/my_css_session2.css", "default", "default-fonts"]
+    seal: true
+    lib_dir: libs
+    self_contained: true
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: center, middle, inverse
+# Accéder au jeu de données
+
+`r icon::fa("walking", size = 3)`
+---
+class: exo
+## Exo 1
+
+&#9658; Partez à la recherche des jeux de données (datasets) sur DataSud
+
+Pour rappel, il s'agit :
+
+- `r icon::fa("file", size = 1)` des indicateurs de développement durable sur l'épanouissement des êtres humains
+
+- `r icon::fa("file", size = 1)` des populations exposées au dépassement des valeurs de référence des PM10, NO2 et O3 sur la région Sud PACA
+
+---
+### Réponse :
+`r icon::fa("file", size = 1)` [Dataset épanouissement](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
+
+`r icon::fa("file", size = 1)` [Populations exposées](https://trouver.datasud.fr/dataset/populations-et-territoires-exposes-au-depassement-des-valeurs-limites-sur-la-region-sud)
+
+---
+class: center, middle, inverse
+# Interpréter les méta-données
+### Tâter, lire le terrain
+
+`r icon::fa("book-reader", size = 3)`
+
+---
+
+Les premières questions à se poser, quand on rencontre un jeu de données, sont les suivantes :
+
+- **Qui** a produit la donnée ?
+
+--
+
+- **Quand** a-t-elle été produite et est-elle suffisamment récente pour l'usage que je veux en faire ?
+
+--
+
+- Quelle est son **emprise géographique** (si elle existe) et quel est son niveau de **granularité** (commune, département, région, interco ?)
+
+--
+
+- S'il est possible de le savoir, quel a été **le mode de production** de la donnée ?
+
+--
+
+- Après ouverture, paraît-elle d'assez bonne **qualité** ?
+
+--
+
+- Le fichier de **méta-données** décrit-il suffisamment bien l'ensemble des variables présentes ?
+
+`r icon::fa("readme", size = 1)` [Lire l'article d'infolabs sur l'interview de la donnée](https://infolabs.io/interview-de-la-donnee)
+
+---
+class: exo
+
+## Exo 2
+
+&#9658; `r icon::fa("file", size = 1)` Pour le jeu de données sur l'exposition des populations aux polluants, répondre à ces questions :
+
+1. La donnée mise à disposition a-t-elle été mesurée ou estimée/modélisée ? (Question *comment*) <!-- par modélisation depuis des données de mesure -->
+
+--
+
+2. Puis-je connaître mon exposition aux polluants sur mon lieu de travail ? <!-- l'estimation ne tient pas compte de l'exposition sur son lieu de
+travail/école, les lieux de loisirs ou lors de ses déplacements-->
+
+--
+
+3. Qui est l'**auteur** de la donnée ? Semble-t-il être de confiance ? Si j'ai une question à poser sur cette donnée, qui contacter ? (Question *qui*)
+
+--
+
+4. De **quand** datent les données ? Puis-je disposer de la donnée d'il y a un mois ? (Question *quand*)<!-- créées le 05 07 2017 avec fréquence annuelle-->
+
+--
+
+5. Le **formats** de la donnée garantit-il son intégration ? <!--CSV, GeoJSON, WFS-->
+
+--
+
+6. Puis-je croiser la donnée avec une autre et diffuser le produit du croisement sous une licence ouverte ? <!-- OpenDataCommons - ODbL-->
+
+--
+
+7. Quelle information aurait-on pour une ligne du tableau si pour celle-ci, **PM10** apparaissait dans la colonne **nom_poll** et **VL** apparaissait dans la colonne **valeur_reg** ?
+
+---
+class: middle, center
+
+#Quelles questions posez-vous à quelqu'un que vous venez de rencontrer ?
+
+---
+class: exo
+
+## Exo 3
+
+&#9658; `r icon::fa("file", size = 1)` Pour le jeu de données sur les indicateur d'épanouissement, répondre à ces questions :
+
+- volet **Bruit**
+  1. Les niveaux de bruit sont-ils relevés par mesure locale ou calculés grâce à des modèles numériques ? <!-- Les cartes de bruit ne sont pas le reflet de mesures réellement effectuées dans les zones considérées. Les
+niveaux de bruit sont évalués au moyen de modèles numériques intégrant les principaux paramètres qui
+influencent le bruit et sa propagation : densité et nature du trafic, vitesse autorisée, configuration des lieux,
+caractéristiques de la voie. -->
+  
+--
+  
+- volet **Qualité de l'air**
+  2. Puis-je obtenir une valeur de polluants exact à proximité de l'usine de Gardanne ? 
+  <!-- voir nb de jours dans l'année avec un indice de qualité de l'air mauvais.
+  L’indice Atmo est un indicateur journalier qui fournit une
+information synthétique sur la qualité de l’air des agglomérations de 100 000 habitants et plus 
+Il ne
+permet pas de mettre en évidence des phénomènes localisés : pollution en proximité industrielle,
+automobile… 
+-->
+  
+--
+  
+  3. Le monoxyde de carbone figure-t-il parmi les polluants mesurés en continu ? <!--  Il est basé
+sur les concentrations dans l’air de quatre polluants mesurés en continu par des appareils automatiques :
+dioxyde de soufre (SO2), dioxyde d’azote (NO2), ozone (O3) et particules de diamètre inférieur à 10 μm
+(PM10).  -->
+  
+--
+  
+  4. Peut-on avoir un détail par polluant ?
+<!-- 
+L'indicateur est le nombre de jours par an où l'indice Atmo de la qualité de l'air est médiocre, mauvais ou très
+mauvais (indice de 6 à 10), en moyenne sur 3 ans.
+L’indice Atmo prend en compte le polluant le plus pénalisant (pour une même journée, plusieurs polluants
+peuvent être responsables de l’indice Atmo). Toutefois, les concentrations des autres polluants peuvent
+également être élevées -->
+---
+class: center, middle, inverse
+# Pré-visualiser la donnée
+### Sonder le terrain  
+
+`r icon::fa("glasses", size = 3)`
+
+---
+## Outils
+
+Les outils CSV Good Generator d'Etalab et [CSVLint](https://csvlint.io/) permettent de contrôler la qualité des données.
+
+[WTFCSV](https://databasic.io/en/wtfcsv/) permet d'avoir un aperçu rapide des données.
