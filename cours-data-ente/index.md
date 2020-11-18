@@ -7,7 +7,7 @@
 - [Les acteurs de l'OpenData](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_4_acteurs.html)
 - [Avant de vous présenter à la Data](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_5_avant_data.html)
 - [Rendez-vous avec la Data](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_6_rdv_data.html)
-- [Quizz  [html](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_7_quizz.html)
+- [Quizz](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_7_quizz.html)
 
 ## Session 2 (travaux pratiques) ½j 
 - [Énoncé du défi](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_1_énoncé.html)
