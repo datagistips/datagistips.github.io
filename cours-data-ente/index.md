@@ -18,4 +18,5 @@
 - [Outils (annexe)](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_6_annexe_outils.html)
 
 ## Licence
+Auteur : Mathieu Rajerison  
 [Creative Commons BY-NC-SA](https://github.com/idleberg/Creative-Commons-Markdown/blob/master/4.0/by-nc-sa.markdown)
