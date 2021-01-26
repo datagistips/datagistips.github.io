@@ -4,10 +4,10 @@ Bienvenue sur mon site.
 
 Vous trouverez ici certaines de mes productions.
 
-## Cours OpenData
+## Cours
 
-[](cours-data-ente)
+[Cours OpenData](cours-data-ente)
 
-## Présentations réalisées
+## Présentations
 
-[](slides)
+[Une journée de formation sur l'OpenData](cours-data-ente)
