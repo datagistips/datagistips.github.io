@@ -1,8 +1,4 @@
-# Datagistips
-
-Bienvenue sur mon site.
-
-Vous trouverez ici certaines de mes productions.
+[Mon blog](https://datagistips.hypotheses.org/)
 
 ## Cours
 
