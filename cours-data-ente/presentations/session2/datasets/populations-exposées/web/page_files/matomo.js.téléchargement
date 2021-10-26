@@ -1,0 +1,430 @@
+var var_display;
+
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+
+$(document).ready(function() {
+    var_display = getUrlParameter('view_mode');
+	if (var_display) {
+	    $('.media-grid').removeClass('affich-grille affich-liste');
+   		if (var_display === 'grid') {
+        	$('.media-grid').addClass('affich-grille');
+	    } else if (var_display === 'list') {
+    	    $('.media-grid').addClass('affich-liste');
+	    }
+    	$('#affich-mode button').removeClass('active');
+		$('#affich-mode button[data-affich='+var_display+']').addClass('active');
+	}
+});
+
+$('.primary').on('click', '#affich-mode button', function () {
+    var selected_value = $(this).attr('data-affich');
+    var newUrl;
+	// Update URL
+	if (var_display) {
+		newUrl = location.href.replace("view_mode="+var_display, "view_mode="+selected_value);
+	} else {
+		if (window.location.search) {
+			newUrl = window.location.href + '&view_mode=' + selected_value;	
+		} else {
+			newUrl = window.location.href + '?view_mode=' + selected_value;	
+		}
+	}
+	// Reload page with new URL	
+	window.location.href = newUrl;
+});
+
+(function( $ ) {
+
+  //sortList function
+  $.fn.sortList = function(sort, sortType) {
+    cnt = $(this).children('li:visible').get().length;
+    var mylist = $(this);
+    var listitems = $('li', mylist).get();
+
+    if(sort == 'desc') {
+      //descending sort
+      if(sortType  == 'alphaSort') {
+        mylist.removeClass('alph_asc');
+        mylist.removeClass('cnt_asc');
+        mylist.removeClass('cnt_desc');
+        mylist.addClass('alph_desc');
+      } else {
+            mylist.removeClass('alph_asc');
+            mylist.removeClass('cnt_asc');
+            mylist.removeClass('alph_desc');
+            mylist.addClass('cnt_desc');
+      }
+    } else {
+      //ascending sort
+      if(sortType  == 'alphaSort') {
+        mylist.removeClass('alph_desc');
+        mylist.removeClass('cnt_asc');
+        mylist.removeClass('cnt_desc');
+        mylist.addClass('alph_asc');
+      } else {
+        mylist.removeClass('cnt_desc');
+        mylist.removeClass('alph_desc');
+        mylist.removeClass('alph_asc');
+        mylist.addClass('cnt_asc');
+      }
+    }
+
+    if(listitems.length > 1) {
+      listitems.sort(function(a, b) {
+        if(sortType == 'alphaSort') {
+          var compA = $.trim($(a).text().toUpperCase());
+          var compB = $.trim($(b).text().toUpperCase());
+        } else {
+          var compA_arr = $(a).text().split("(");
+          var compB_arr = $(b).text().split("(");
+          var compA = parseInt($.trim(compA_arr[compA_arr.length-1].split(')')[0]));
+          var compB = parseInt($.trim(compB_arr[compB_arr.length-1].split(')')[0]));
+        }
+
+        if(sort == 'asc'){
+          return (compA < compB) ? -1 : 1;
+        } else {
+          return (compA > compB) ? -1 : 1;
+        }
+      });
+    }
+
+    //add sorted list to ul
+    $.each(listitems, function(i, itm) {
+        mylist.append(itm);
+    });
+  }
+
+  $.extend({
+    getUrlVars: function(){
+      var vars = [], hash;
+      var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+      }
+      return vars;
+    },
+
+    getUrlVar: function(name){
+      return $.getUrlVars()[name];
+    }
+  });
+
+  /* for all Show more/show less links modify link to take you to that facet */
+/*  $('a#facet_read_more').each( function() {
+    var name = $(this).attr('name').split("sm_")[1];
+    var url = $(this).attr('href');
+
+    if(url.indexOf('#sec-' + name) == -1){
+      url = url.replace('#', '') + '#sec-' + name;
+    }
+
+    $(this).click(function(){
+      location.href = url;
+    });
+  });
+*/
+  /**
+   * for Alphabatical sort set param 'sortType' to alphaSort
+   * for Count sort set param 'sortType' to cntSort
+   * for sort order set param 'sort' to asc or desc
+  **/
+  var defaults = {
+    'organization' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'groups' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'datatype' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'support' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'res_format' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'license_id' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'tags' : {'sortType': 'cntSort', 'sort' : 'desc'},
+    'frequency' : {'sortType': 'cntSort', 'sort' : 'desc'},
+  };
+
+  var allVars = $.getUrlVars();
+  var paramArr=[];
+  var defaultArr = defaults;
+
+  if(allVars[0] != window.location.href) {
+    for(var i = 0; i < allVars.length; i++) {
+      var sort = $.getUrlVar(allVars[i]).split('#')[0];
+
+      if(sort == 'asc' || sort == 'desc') {
+        var id, sortType;
+        var parts = allVars[i].split('_');
+
+        if(parts[parts.length-1] == 'sortAlpha'){
+          sortType = 'alphaSort';
+        } else {
+          sortType = 'cntSort';
+        }
+
+        if(parts.length > 3) {
+          parts.splice(0,1);
+          parts.splice(parts.length-1, 1);
+          id = parts.join('_');
+        } else {
+            id = parts[1];
+        }
+
+        paramArr.push(id);
+        $('ul#' + id).sortList(sort, sortType);
+      }
+    }
+
+    var diff = {};
+    $.each(defaults, function(i,e) {
+      if ($.inArray(i, paramArr) == -1) {
+        diff['' + i + ''] = e;
+      }
+    });
+
+    defaultArr = diff;
+  }
+
+  $.each(defaultArr, function(i,e) {
+    if($('ul#'+ i).length > 0){
+      $('ul#' + i).sortList(e['sort'], e['sortType']);
+    }
+  });
+
+  $(".sortFacetAlpha").click(function() {
+    var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
+    var mylist = $('ul#' + id);
+
+    if(mylist.hasClass('alph_asc')){
+      var sort = 'desc';
+    } else {
+      var sort = 'asc';
+    }
+    mylist.sortList(sort, 'alphaSort');
+  });
+
+  $(".sortFacetCount").click(function() {
+    var id = $(this).parent().parent().find('ul.unstyled.nav.nav-simple.nav-facet').attr('id');
+    var mylist = $('ul#' + id);
+
+    if(mylist.hasClass('cnt_asc')){
+      var sort = 'desc';
+    } else {
+      var sort = 'asc';
+    }
+
+    mylist.sortList(sort, 'cntSort');
+  });
+
+})( jQuery );
+
+// Convert bytes to octets
+function toOctetString(value) {
+	var len = String(value).length;
+	if (len > 6) {
+		return (Math.round((value / 1024 / 1024)*10)/10).toLocaleString('fr-FR') + ' Mo';
+	} else if (value > 3) {
+		return (Math.round(value / 1024)).toLocaleString('fr-FR') + ' Ko';
+	} else if (value > 0) {
+		return Math.round(value) + ' octets';
+	} else {
+        return '';
+    }
+}
+
+// Init Bootstrap Tooltips
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Update resource size in resource list (ckan: dataset)
+$('#dataset-resources .resource-list .resource-item [name="size"]').each(function(){
+  var size_bytes = $(this).attr('data-size');
+  $(this).children('span[name="size-value"]').html(toOctetString(size_bytes));
+});
+
+// Update resource size in additional info (ckanext-scheming)
+var resource_size = $('table tr[name="size"] td').html();
+$('table tr[name="size"] td').html(toOctetString(resource_size));
+
+// Modal resource download
+$(document).on("click", ".open-download-modal", function () {
+  var datasetName = $(this).data('datasetname');
+  var datasetTitle = $(this).data('datasettitle');
+  var datasetCreationDate = $(this).data('datasetcreationdate');
+  var datasetPublicationDate = $(this).data('datasetpublicationdate');
+  var datasetModificationDate = $(this).data('datasetmodificationdate');
+  var datasetLicense = $(this).data('datasetlicense');
+  var resourceTitle = $(this).data('resourcetitle');
+  var resourceURL = $(this).data('resourceurl');
+  var resourceFormat = $(this).data('resourceformat');
+  var resourceCRS = $(this).data('resourcecrs');
+
+  // Download button URL
+  $("#download-modal-res-list .download-button-resource").attr("href", resourceURL);
+
+  // Replace variables
+  var regexDatasetURL = new RegExp('<a href="{{URL_DATASET}}">', "g");
+  var modalCustomContent = $("#download-modal-res-list .modal-custom-content").html()
+    .replace(/{{TITLE_DATASET}}/g,`<span class="modal-dataset-title"></span>`)
+    .replace(regexDatasetURL,`<a class="modal-dataset-url"></span>`)
+    .replace(/{{DATE_CREATION}}/g,`<span class="modal-dataset-crea-date"></span>`)
+    .replace(/{{DATE_PUBLICATION}}/g,`<span class="modal-dataset-publi-date"></span>`)
+    .replace(/{{DATE_EDITION}}/g,`<span class="modal-dataset-modif-date"></span>`)
+    .replace(/{{LICENSE_DATASET}}/g,`<span class="modal-dataset-license"></span>`)
+    .replace(/{{TITLE_RESOURCE}}/g,`<span class="modal-res-title"></span>`)
+    .replace(/{{FORMAT_RESOURCE}}/g,`<span class="modal-res-format"></span>`)
+    .replace(/{{CRS_RESOURCE}}/g,`<span class="modal-res-crs"></span>`);
+
+  $("#download-modal-res-list .modal-custom-content").html(modalCustomContent);
+
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-title").html(datasetTitle);
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-url").attr("href", `/dataset/${datasetName}`);
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-crea-date").html(datasetCreationDate);
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-publi-date").html(datasetPublicationDate);
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-modif-date").html(datasetModificationDate);
+  $("#download-modal-res-list .modal-custom-content .modal-dataset-license").html(datasetLicense);
+  $("#download-modal-res-list .modal-custom-content .modal-res-title").html(resourceTitle);
+  $("#download-modal-res-list .modal-custom-content .modal-res-format").html(resourceFormat);
+  $("#download-modal-res-list .modal-custom-content .modal-res-crs").html(resourceCRS);
+});
+
+/* global crigepacaScreenReaderText */
+var crigepacaScreenReaderText = {
+	"quote":"<svg class=\"icon icon-quote-right\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-quote-right\" xlink:href=\"#icon-quote-right\"><\/use> <\/svg>",
+	"expand":"Expand child menu",
+	"collapse":"Collapse child menu",
+	"icon":"<svg class=\"icon icon-angle-down\" aria-hidden=\"true\" role=\"img\"> <use href=\"#icon-angle-down\" xlink:href=\"#icon-angle-down\"><\/use> <span class=\"svg-fallback icon-angle-down\"><\/span><\/svg>"
+};
+
+/**
+ * Theme functions file.
+ *
+ * Contains handlers for navigation and widget area.
+ */
+
+(function( $ ) {
+	var masthead, menuToggle, siteNavContain, siteNavigation;
+
+	function initMainNavigation( container ) {
+
+		// Add dropdown toggle that displays child menu items.
+		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+			.append( crigepacaScreenReaderText.icon )
+			.append( $( '<span />', { 'class': 'screen-reader-text', text: crigepacaScreenReaderText.expand }) );
+
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+
+		// Set the active submenu dropdown toggle button initial state.
+		container.find( '.current-menu-ancestor > button' )
+			.addClass( 'toggled-on' )
+			.attr( 'aria-expanded', 'true' )
+			.find( '.screen-reader-text' )
+			.text( crigepacaScreenReaderText.collapse );
+		// Set the active submenu initial state.
+		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+
+		container.find( '.dropdown-toggle' ).click( function( e ) {
+			var _this = $( this ),
+				screenReaderSpan = _this.find( '.screen-reader-text' );
+
+			e.preventDefault();
+			_this.toggleClass( 'toggled-on' );
+			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+			screenReaderSpan.text( screenReaderSpan.text() === crigepacaScreenReaderText.expand ? crigepacaScreenReaderText.collapse : crigepacaScreenReaderText.expand );
+		});
+	}
+
+	initMainNavigation( $( '.main-navigation' ) );
+
+	masthead       = $( '#masthead' );
+	menuToggle     = masthead.find( '.menu-toggle' );
+	siteNavContain = masthead.find( '.main-navigation' );
+	siteNavigation = masthead.find( '.main-navigation > div > ul' );
+
+	// Enable menuToggle.
+	(function() {
+
+		// Return early if menuToggle is missing.
+		if ( ! menuToggle.length ) {
+			return;
+		}
+
+		// Add an initial value for the attribute.
+		menuToggle.attr( 'aria-expanded', 'false' );
+
+		menuToggle.on( 'click.crigepaca', function() {
+			siteNavContain.toggleClass( 'toggled-on' );
+
+			$( this ).attr( 'aria-expanded', siteNavContain.hasClass( 'toggled-on' ) );
+		});
+	})();
+
+	// Fix sub-menus for touch devices and better focus for hidden submenu items for accessibility.
+	(function() {
+		if ( ! siteNavigation.length || ! siteNavigation.children().length ) {
+			return;
+		}
+
+		// Toggle `focus` class to allow submenu access on tablets.
+		function toggleFocusClassTouchScreen() {
+			if ( 'none' === $( '.menu-toggle' ).css( 'display' ) ) {
+
+				$( document.body ).on( 'touchstart.crigepaca', function( e ) {
+					if ( ! $( e.target ).closest( '.main-navigation li' ).length ) {
+						$( '.main-navigation li' ).removeClass( 'focus' );
+					}
+				});
+
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+					.on( 'touchstart.crigepaca', function( e ) {
+						var el = $( this ).parent( 'li' );
+
+						if ( ! el.hasClass( 'focus' ) ) {
+							e.preventDefault();
+							el.toggleClass( 'focus' );
+							el.siblings( '.focus' ).removeClass( 'focus' );
+						}
+					});
+
+			} else {
+				siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' ).unbind( 'touchstart.crigepaca' );
+			}
+		}
+
+		if ( 'ontouchstart' in window ) {
+			$( window ).on( 'resize.crigepaca', toggleFocusClassTouchScreen );
+			toggleFocusClassTouchScreen();
+		}
+
+		siteNavigation.find( 'a' ).on( 'focus.crigepaca blur.crigepaca', function() {
+			$( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+		});
+	})();
+})( jQuery );
+
+
+// Matomo
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//stats.datasud.fr/matomo/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '6']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
