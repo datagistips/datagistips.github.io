@@ -10,7 +10,7 @@
 
 ## Session 2 (travaux pratiques) ½j 
 - [Quizz](https://datagistips.github.io/cours-data-ente/presentations/session1/session1_7_quizz.html)
-- [#TableauChallenge](https://datagistips.github.io/cours-data-ente/presentations/session1/session2_0_tableauchallenge.html)
+- [#TableauChallenge](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_0_tableauChallenge.html)
 
 ### Au travail !
 - [Énoncé du défi](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_1_énoncé.html)
