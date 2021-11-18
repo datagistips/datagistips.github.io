@@ -1,7 +1,7 @@
 # Notebooks
 Notebooks présidant à la création d'une application Shiny sur l'artificialisation :
 
-<img src=animation-compressed.gif width='60%''>
+<img src=animation.gif width='60%''>
 
 0. [Introduction (R Markdown)](notebooks/0-notebook-intro.Rmd) | 
  [html](notebooks/0-notebook-intro.html)  
