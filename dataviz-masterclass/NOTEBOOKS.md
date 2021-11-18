@@ -1,5 +1,5 @@
 # Notebooks
-Notebooks présidant à la création de l'application Shiny :
+Notebooks présidant à la création d'une application Shiny sur l'artificialisation :
 
 0. [Introduction (R Markdown)](notebooks/0-notebook-intro.Rmd) | 
  [html](notebooks/0-notebook-intro.html)  
