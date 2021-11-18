@@ -1,0 +1,76 @@
+---
+title: "Dataviz Notebook #2"
+output: html_notebook
+---
+Dans ce notebook, nous allons voir comment afficher les statistiques relatives aux communes affichées dans la carte.
+
+Chargeons aussi la librairie sf :
+```{r}
+library(sf)
+library(tidyverse)
+```
+
+
+Lisons nos données administratives :
+```{r}
+comms <- st_read("C:/Users/mathieu.rajerison/Documents/DATAS/ADMIN-EXPRESS-COG_2-1__SHP__FRA_L93_2020-03-25/ADMIN-EXPRESS-COG_2-1__SHP__FRA_2020-03-25/ADMIN-EXPRESS-COG/1_DONNEES_LIVRAISON_2020-03-25/ADE-COG_2-1_SHP_LAMB93_FR/COMMUNE_CARTO.shp") %>% st_set_crs(2154) %>% st_transform(4326)
+```
+
+Exportons-les :
+```{r}
+saveRDS(comms, "../shinyapp/app1/comms.rds")
+```
+
+Dans l'appli, lorsqu'on déplace la carte, les coordonnées sont retournées à l'utilisateur sous cette forme :
+```
+$north
+[1] 43.39115
+
+$east
+[1] 6.439616
+
+$south
+[1] 42.99066
+
+$west
+[1] 5.884806
+```
+
+Créons un objet spatial à partir de ces coordonnées :
+```{r}
+coords <- c(xmin = 5.884806, ymin = 42.99066, xmax = 6.439616, ymax = 43.39115)
+bb <- st_bbox(coords, crs = st_crs(4326)) %>% st_as_sfc
+```
+
+On réalise la requête d'intersection entre nos communes et cette bounding box: 
+```{r}
+i <- comms %>% st_intersects(bb)
+i
+```
+
+Les communes intersectées sont celles pour lesquelles l'élément est non vide :
+```{r}
+w <- which(sapply(i, function(x) length(x) != 0))
+codesInsees <- comms %>% slice(w) %>% pull(INSEE_COM)
+codesInsees
+```
+
+Au final, on peut créer une fonction qui retourne les codes INSEE des communes qui sont dans la bbox :
+```{r}
+getCommsInBB <- function(comms, xmin, ymin, xmax, ymax) {
+  bb <- st_bbox(c(xmin = xmin, ymin = ymin, xmax = xmax, ymax = ymax), crs = st_crs(4326)) %>% st_as_sfc
+  i <- comms %>% st_intersects(bb)
+  w <- which(sapply(i, function(x) length(x) != 0))
+  codesInsees <- comms %>% slice(w) %>% pull(INSEE_COM)
+  codesInsees
+}
+
+getCommsInBB(comms, xmin = 5.884806, ymin = 42.99066, xmax = 6.439616, ymax = 43.39115)
+```
+
+
+Nous pouvons réaliser le graphique sur ces communes :
+```{r}
+codesInsees <- getCommsInBB(comms, xmin = 5.884806, ymin = 42.99066, xmax = 6.439616, ymax = 43.39115)
+makePlot(flux, codesInsees)
+```
