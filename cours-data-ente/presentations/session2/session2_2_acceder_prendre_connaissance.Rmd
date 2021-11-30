@@ -14,30 +14,34 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 # Accéder au jeu de données
 
-`r icon::fa("walking", size = 3)`
+`r fa("walking", width = "3em")`
 ---
 class: exo
 ## Exo 1
 
 &#9658; Partez à la recherche du jeu de données (datasets) sur DataSud :
 
-- `r icon::fa("file", size = 1)` des indicateurs de développement durable sur l'épanouissement des êtres humains
+- `r fa("file", width = "1em")` des indicateurs de développement durable portant sur les déplacements, la qualité de l'air, l'exposition au bruit
 
 Et décrire le contenu de la page.
 
 ---
 ### Réponse :
-`r icon::fa("file", size = 1)` [Dataset épanouissement](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
+`r fa("file", width = "1em")` [Dataset épanouissement](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
 
 ---
 class: center, middle, inverse
 # Interpréter les méta-données
 ### Tâter, lire le terrain
 
-`r icon::fa("book-reader", size = 3)`
+`r fa("book-reader", width = "3em")`
 
 ---
 
@@ -65,14 +69,14 @@ Les premières questions à se poser, quand on rencontre un jeu de données, son
 
 - Le fichier de **méta-données** décrit-il suffisamment bien l'ensemble des variables présentes ?
 
-`r icon::fa("readme", size = 1)` [Lire l'article d'infolabs sur l'interview de la donnée](https://infolabs.io/interview-de-la-donnee)
+`r fa("readme", width = "1em")` [Lire l'article d'infolabs sur l'interview de la donnée](https://infolabs.io/interview-de-la-donnee)
 
 ---
 class: exo
 
 ## Exo 2
 
-&#9658; `r icon::fa("file", size = 1)` Pour ce jeu de données, répondre aux questions suivantes :
+&#9658; `r fa("file", width = "1em")` Pour ce jeu de données, répondre aux questions suivantes :
 
 1. Qui est l'**auteur** de la donnée ? Semble-t-il être de confiance ? Si j'ai une question à poser sur cette donnée, qui contacter ? (Question *qui*)
 
@@ -88,18 +92,12 @@ class: exo
 
 4. Sous **quelles conditions** puis-je utiliser ces données ? <!-- LO-->
 
-
----
-class: middle, center
-
-# Quelles questions posez-vous à quelqu'un que vous venez de rencontrer ?
-
 ---
 class: center, middle, inverse
 # Pré-visualiser la donnée
 ### Sonder le terrain  
 
-`r icon::fa("glasses", size = 3)`
+`r fa("glasses", width = "3em")`
 
 ---
 ## Outils

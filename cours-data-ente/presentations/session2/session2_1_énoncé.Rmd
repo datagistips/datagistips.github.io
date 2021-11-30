@@ -14,35 +14,29 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 # Feuille de route
-L'environnement et notre espace de vie nous intéressent particulièrement.
+L'environnement et notre espace de vie nous intÃ©ressent particuliÃ¨rement.
 
-Afin d'analyser leur état en région PACA, nous allons tenter d'accéder, sur le portail DataSud à différentes données relatives à la **qualité de l'air**, le **bruit** et la **pollution** afin de les analyser.
-
----
-# Les données
-Voici les différentes données dont nous aurons besoin :
-
-`r icon::fa("file", size = 1)` Les indicateurs de développement durable sur l'**épanouissement** des êtres humains
-
---
-
-`r icon::fa("file", size = 1)` Les **populations exposées** au dépassement des valeurs de référence des PM10, NO2 et O3 sur la région Sud PACA
+Afin d'analyser leur Ã©tat en rÃ©gion PACA, nous allons tenter d'accÃ©der, sur le portail DataSud Ã  des donnÃ©es relatives Ã  la **qualitÃ© de l'air**, le **bruit** et la **pollution** afin de les analyser.
 
 ---
-# Les étapes
-Voici les différentes étapes de l'exercice :
+# Les Ã©tapes
+Voici les diffÃ©rentes Ã©tapes de l'exercice :
 
-`r icon::fa("walking", size = 2)`  Dans un premier temps, nous **accèderons** aux données et en **prendrons connaissance**.
-
---
-
-`r icon::fa("book-reader", size = 2)`  Dans un second temps, nous les **explorerons** afin de répondre à des questions précises
+`r fa("walking", width = "2em")`  Dans un premier temps, nous **accÃ¨derons** au jeu de donnÃ©es et en **prendrons connaissance**.
 
 --
 
-`r icon::fa("glasses", size = 2)`  Dans un troisième temps, nous les **visualiserons** à l'aide de graphiques
+`r fa("book-reader", width = "2em")`  Dans un second temps, nous les **explorerons** afin de rÃ©pondre Ã  des questions prÃ©cises
 
 --
 
-`r icon::fa("map-marked", size = 2)`  Dans un quatrième temps, nous prendrons une donnée spatiale que nous **cartographierons**.
+`r fa("glasses", width = "2em")`  Dans un troisiÃ¨me temps, nous les **visualiserons** Ã  l'aide de graphiques
+
+--
+
+`r fa("map-marked", width = "2em")`  Dans un quatriÃ¨me temps, nous prendrons une donnÃ©e spatiale que nous **cartographierons**.

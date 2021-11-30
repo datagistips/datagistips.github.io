@@ -15,6 +15,10 @@ output:
       countIncrementalSlides: false
       
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
 # `r icon::fa("pencil-alt", size = 1)` À vous de jouer

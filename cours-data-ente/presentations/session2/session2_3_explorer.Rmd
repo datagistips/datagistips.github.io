@@ -15,9 +15,13 @@ output:
       countIncrementalSlides: false
 
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
-# `r icon::fa("table", size = 1)` Opérations de base sous Excel ou LibreOffice
+# `r fa("table", width = "1em")` Opérations de base sous Excel ou LibreOffice
 
 ###Rappel de quelques fonctions utiles avant de commencer
 
@@ -60,7 +64,7 @@ class: center, middle, inverse
 
 # Indicateurs de développement durable sur l'épanouissement des êtres humains 
 
-[`r icon::fa("file", size = 2, colour = "rgb(249, 38, 114);")` Cliquez ici pour accéder au dataset](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
+[`r fa("file", width = "2em", fill = "rgb(249, 38, 114);")` Cliquez ici pour accéder au dataset](https://trouver.datasud.fr/dataset/epanouissement-de-tous-les-etres-humains-indicateurs-de-developpement-durable)
 
 ---
 class: exo
@@ -68,14 +72,30 @@ class: exo
 ##Exo 4
 &#9658; <u>Revue post-téléchargement</u>
 
-1. Combien de fichiers trouve-t-on dans le lot de données ? Sont-ils tous différents ? Combien de jeux de données différents trouve-t-on en réalité ? Y en a-t-il en trop, en doublons ?
+1. Combien de fichiers trouve-t-on dans le lot de données et sous quel format sont-ils ?
+
+--
+
+2. Combien de fichiers ou jeux de données ont des contenus différents en réalité ? Du coup, y a-t-il des fichiers en doubles (doublons) ?
 <!-- on en trouve 4 et il y a trois fichiers en double : Indicateurs DD-2017-Epanouissement des êtres humains.xls, Indicateurs DD-2017-Epanouissement des êtres humains.ods et Indicateurs DD2017_finalité 3 : épanouissement de tous ...
 Les fichiers uniques sont indicateurs-dd-2017-epanouissement-des-etres-humains.ods et synthese-indicateurs-dd-paca-2017.xls -->
 
-2. Quel fichier comprend l'ensemble des indicateurs/volets listés dans la documentation ? Peut-on conduire une étude portant sur l'ensemble de ces indicateurs à l'échelle des Bouches-du-Rhône ?
+--
+
+3. Où trouve-t-on la documentation associée aux données ? A savoir le document décrivant l'ensemble des indicateurs, leur origine ?
+
+--
+
+4. Quel fichier comprend l'ensemble des indicateurs/volets listés dans la documentation ?
+
+--
+
+5. Peut-on conduire une étude portant sur l'ensemble des indicateurs de dévéloppement durable sur les Bouches-du-Rhône ?
 <!-- dans le fichier Indicateurs DD-2017-Epanouissement des êtres humains.ods -->
 
-3. Quel jeu de données comprend des données précises ? Y retrouve-t-on l'intégralité des indicateurs ?
+--
+
+6. Quel jeu de données comprend des données à l'échelle de l'agglomération ? Y retrouve-t-on plus d'indicateurs que dans l'autre fichier ?
 <!-- le fichier Indicateurs DD-2017-Epanouissement des êtres humains.ods. Oui, ils y sont tous -->
 
 ---
@@ -84,10 +104,16 @@ class:exo
 ##Exo 5
 &#9658; <u>Structure des fichiers</u>
 
-1. Dans le fichier *synthese*, les variables apparaissent-elles en colonnes ou en lignes ? Et dans les autres fichiers ?
+1. Dans le fichier *synthese*, les variables apparaissent-elles en colonnes ou en lignes ?
 <!-- dans synthese : variables en lignes -->
 
-2. Dans le fichier *detail*, que signifie à votre avis la valeur *nd* dans l'onglet sur la qualité de l'air ? Pourquoi est-il plus important de mettre cette valeur que de laisser la cellule vide ?
+--
+
+2. Dans le fichier *detail*, que signifie à votre avis la valeur *nd* dans l'onglet sur la qualité de l'air ? 
+
+--
+
+3. Pourquoi est-il plus important de mettre cette valeur que de laisser la cellule vide ?
 <!-- non déterminé -->
 
 ---
@@ -110,7 +136,7 @@ class: exo
 
 ## Exo 7
 
-&#9658; `r icon::fa("file", size = 1)` Pour le jeu de données sur les indicateurs d'épanouissement, Trouver le fichier qui contient la documentation associée au jeu de données et répondre à ces questions
+&#9658; `r fa("file", width = "1em")` Pour le jeu de données sur les indicateurs d'épanouissement, Trouver le fichier qui contient la documentation associée au jeu de données et répondre à ces questions
  et répondre à ces questions :
 
 - volet **Bruit**
