@@ -14,6 +14,11 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
 # La Data
@@ -53,7 +58,7 @@ width: 65%
 ## Étymologie, racines
 <!--[Image de César]-->
 .pull-left[
-<center><img src=https://idalab.de/wp-content/uploads/1_Euclid_Data_BnF.jpeg width=80%></img></center>
+<center><img src=https://upload.wikimedia.org/wikipedia/commons/3/30/Euklid-von-Alexandria_1.jpg width=80%></img></center>
 ]
 
 .pull-right[
@@ -160,7 +165,7 @@ L'accroissement des flux de données concerne par exemple celui des réseaux de 
 
 Les données circulent entre des machines soit via les airs, en particulier via les ondes via les satellites et antennes émettrices, soit via des câbles comme la fibre optique.
 
-<center><img src=https://upload.wikimedia.org/wikipedia/commons/e/ea/%D9%85%D8%AE%D8%A7%D8%A8%D8%B1%D8%A7%D8%AA_%D9%81%DB%8C%D8%A8%D8%B1_%D9%86%D9%88%D8%B1%DB%8C.jpg width=50%></img></center>
+<center><img src=https://upload.wikimedia.org/wikipedia/commons/4/49/Fibreoptic.jpg width=50%></img></center>
 
 ---
 
@@ -187,12 +192,12 @@ class: center, middle
 
 Les **algorithmes** sont des séquences ordonnées d'opérations informatiques. Ils automatisent le traitement de masses d'information et parfois en révèlent des motifs. Certains de ces algorithmes appelés réseaux de neurones miment même le fonctionnement du cerveau humain et sont en plein développement (intelligence artificielle).
 
-<center><img src=https://www.arl.army.mil/www/articles/3179/image.1.large.jpg width=30%></img></center>
+<center><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Polygon_Greedy_triangulation_steps.svg/617px-Polygon_Greedy_triangulation_steps.svg.png width=30%></img></center>
 
 ---
 class: center, middle
 
-#Quelles sont les différentes étapes de la "vie" d'un produit de consommation ?
+# Par quelles une frite arrive-t-elle dans votre assiette ?
 
 ---
 
@@ -285,9 +290,9 @@ Le compteur Linky peut être considéré comme une brique possible de la smart c
 
 Pour certains, Smart City rime aussi avec *Big Brother*, notamment vidéosurveillance et sécurité publique. Les images peuvent être interprétées par des ordinateurs afin d'identifier des attroupements mais aussi des individus. 
 
-`r icon::fa("readme", size = 1)` [Article de la Quadrature du Net : "La Smart City policière se répand comme une traînée de poudre"](https://www.laquadrature.net/fr/nice-smart-city-surveillance)
+`r fa("readme", width = "1em")` [Article de la Quadrature du Net : "La Smart City policière se répand comme une traînée de poudre"](https://www.laquadrature.net/fr/nice-smart-city-surveillance)
 
-`r icon::fa("readme", size = 1)` [Reconnaissance faciale en Chine, réalisée par une startup de Shanghai :](https://www.technologyreview.com/s/611815/who-needs-democracy-when-you-have-data/)
+`r fa("readme", width = "1em")` [Reconnaissance faciale en Chine, réalisée par une startup de Shanghai :](https://www.technologyreview.com/s/611815/who-needs-democracy-when-you-have-data/)
 <center><img src=https://cdn.technologyreview.com/i/images/so18-china-3.jpg?sw=1080&cx=0&cy=0&cw=2109&ch=1406 width=70%></img></center>
 
 ---
@@ -327,7 +332,7 @@ Le citoyen est tellement connecté et parfois si mal informé que des données p
 
 En l'occurrence, peu de personnes lisent les *Conditions Générales d'Utilisation* d'applications Internet avant de les approuver.
 
-![](https://017qndpynh-flywheel.netdna-ssl.com/wp-content/uploads/2018/04/military-base-mali.png)
+![](https://www.bellingcat.com/app/uploads/2018/04/airbase-afghanistan.png)
 
 [La société Bellingcat a réussi à déterminer les zones d'entraînement de militaires](https://www.bellingcat.com/resources/articles/2018/07/08/strava-polar-revealing-homes-soldiers-spies/)
 
@@ -376,4 +381,4 @@ Afin de se départir d'une vision élitiste de la donnée, la Data Literacy (Lit
 
 Cela passe par la **formation**, la **sensibilisation** des individus.
 
-`r icon::fa("mouse-pointer", size = 1)` [Testez votre culture des données avec dataposition](https://dataposition.accatone.net/)
+`r fa("mouse-pointer", width = "1em")` [Testez votre culture des données avec dataposition](https://dataposition.accatone.net/)

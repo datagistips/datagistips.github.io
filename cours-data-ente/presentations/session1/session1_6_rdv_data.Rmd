@@ -14,10 +14,14 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 # Accéder
 
-`r icon::fa("mouse-pointer", size = 4)` 
+`r fa("mouse-pointer", width = "4em")` 
 
 <!-- !! métiers de la donnée -->
 <!-- !! http://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/693/693-isn-opendatadocument-ressource-prof.pdf -->
@@ -49,7 +53,7 @@ class: center, middle, inverse
 
 # Faire connaissance
 
-`r icon::fa("comment", size = 4)` 
+`r fa("comment", width = "4em")` 
 ---
 ## Méta-données
 Quand on clique sur un jeu de données du portail, par exemple [celui-ci sur la localisation des défribrillateurs en Bouches-du-Rhône](https://trouver.datasud.fr/dataset/defibrillateurs-en-region-provence-alpes-cote-dazur), une description plus ou moins longue de la donnée s'affiche sous la forme de texte ou de tableau (voire les deux).
@@ -60,7 +64,7 @@ Elles permettent entre autres de savoir **qui** a produit la donnée, **quand** 
 
 Ces informations sont indispensables afin de **fiabiliser** la source d'une donnée, connaître sa fraîcheur, connaître la licence affectée à la donnée, pouvoir **contacter** le producteur le cas échéant.
 
-`r icon::fa("readme", size = 1)` [Lire l'article "Questions à se poser la première fois qu'on consulte une donnée"](http://rex-analytics.com/data-analysis-questions-to-ask-the-first-time/)
+`r fa("readme", width = "1em")` [Lire l'article "Questions à se poser la première fois qu'on consulte une donnée"](http://rex-analytics.com/data-analysis-questions-to-ask-the-first-time/)
 
 ---
 ## Des outils simples et rapides pour faire connaissance
@@ -77,7 +81,7 @@ Un certain nombre d'outils permettent d'explorer les données afin d'en évaluer
 class: center, middle, inverse
 # Synthétiser la donnée
 
-`r icon::fa("filter", size = 4)` 
+`r fa("filter", width = "4em")` 
 ---
 ## Agréger
 L'agrégation de données consiste à réaliser des **opérations d'englobage** telles que le comptage, la moyenne, le minimum, le maximum, somme à des niveaux d'organisation hiérarchique supérieurs.
@@ -97,7 +101,7 @@ C'est pourquoi il est d'usage de les retranscrire de façon visuelle sous forme 
 
 ---
 
-<center><img src=https://upload.wikimedia.org/wikipedia/commons/a/a6/Religious_affiliation_in_New_Zealand_1991-2013_-_bar_chart.svg width=50%></img></center>
+<center><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Minard%27s_Map_%28vectorized%29.svg/800px-Minard%27s_Map_%28vectorized%29.svg.png width=80%></img></center>
 
 Tracer des **courbes à partir de séries temporelles**, représenter des **camemberts** ou des diagrammes en **barres** permet très rapidement de repérer des motifs intéressants dans les données.
 
@@ -114,7 +118,7 @@ Aussi, quand cela est possible, la cartographie permet de voir des **dynamiques 
 class: center, middle, inverse
 # Calculer, détecter et prédire
 
-`r icon::fa("microchip", size = 4)` 
+`r fa("microchip", width = "4em")` 
 ---
 ## Stats
 Les statistiques correspondent à l'emploi de procédures mathématiques appliquées aux données, afin de **révéler des motifs** difficilement visibles "à l'oeil nu".
@@ -135,7 +139,7 @@ Il consiste à créer un réseau capable de prédire une valeur après avoir app
 class: center, middle, inverse
 # Métiers de la data<br><i>(La data, c'est leur dada)</i>
 
-`r icon::fa("briefcase", size = 3)` 
+`r fa("briefcase", width = "3em")` 
 
 ---
 Une société submergée par des masses d'informations, pour certaines à haute valeur ajoutée, a besoin de personnes sachant s'y retrouver et jongler avec ces dernières. 
@@ -167,7 +171,7 @@ Le Chief Privacy Officer, ou chef de la protection des données personnelles, do
 class: center, middle, inverse
 # Communautés
 
-`r icon::fa("people-carry", size = 4)` 
+`r fa("people-carry", width = "4em")` 
 ---
 ## Evènements
 ###Les hackathons, data camps

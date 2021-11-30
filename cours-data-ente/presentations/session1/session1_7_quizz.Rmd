@@ -14,6 +14,10 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
 # Questions
@@ -23,28 +27,20 @@ class: center, middle, inverse
 - Citez trois modes de transmission d'un message
 - Comment appelle-t-on les "grands" de la donnée aux USA, et en Chine ?
 - Qu'est-ce que la domotique ?
-- Qu'est-ce qu'une ville intelligente ?
 - Donnez trois élements d'une ville intelligente
 
 ---
 - Quelle déclaration donne droit aux citoyens de demander un document à l'administration ? De quand date-t-elle ?
 - Quel organisme a été créé en 2011 pour promouvoir l'ouverture des données publiques ?
 - Quelle est la différence entre *data* et *opendata* ?
-- Remplir les pointillés : production -> ... -> ... -> réutilisation
-- Qu'est-ce qu'une licence ?
+- Donnez des étapes dans les pointillés : production -> ... -> réutilisation
+- Qu'est-ce qu'une licence ? Citez-en deux
 
 ---
 - Comment s'appelle le site national où trouver des données ouvertes ?
 - Donnez le nom de deux organismes fournissant des données de référence
 - Donnez le nom de trois sites OpenData
 - Quel organisme dois-je contacter si mes données personnelles sont diffusées sur internet ?
-
----
-- Comment est structuré un tableau de données ?
-- Mettre dans un tableau les informations suivantes :
-  - Aix en Provence, de code INSEE 13090, appartient au département des Bouches-du-Rhône, et compte 141438 habitants
-  - Marseille compte 850726 habitants, du département des Bouches-du-Rhône, compte 850726 habitants. Son code INSEE est 13055
-  - Nice compte 343304 habitants. Son code INSEE est 06088. Cette ville appartient au département des Alpes Maritimes.
 
 ---
 - Que sont les données brutes ?
@@ -54,6 +50,5 @@ class: center, middle, inverse
 
 ---
 - Citez trois formats de fichiers de données, et les classer par ordre de préférence.
-- Qu'est-ce qu'un système de gestion de base de données relationnelles ?
-- Qu'est-ce qu'un identifiant ?
+- Qu'est-ce qui caractérise un système de gestion de base de données relationnelles ?
 - Donnez deux raisons d'utiliser un identifiant

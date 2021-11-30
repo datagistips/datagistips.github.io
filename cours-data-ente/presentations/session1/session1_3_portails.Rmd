@@ -14,6 +14,10 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 ## Petit aparté sur les portails
 Les données sont mises à disposition sur des portails OpenData, qui sont des catalogues des données ouvertes par l'institution.
 
@@ -82,7 +86,7 @@ Il ne permet d'accéder qu'à des données ouvertes spatialisées, à savoir ré
 ## Portails régionaux
 [DataSud](https://www.datasud.fr/) est le portail OpenData de la région, co-construit par la Région PACA et le CRIGE PACA (Comité Régional de l'Information Géographique)
 
-`r icon::fa("readme", size = 1)` [Lire l'interview de Mathieu Kazmierski du CRIGE et de Thomas Bekkers de la Région Sud](https://www.cerema.fr/system/files/documents/newsletter/2018/Cerema_Signature66_Def2_1.pdf)
+`r fa("readme", width = "1em")` [Lire l'interview de Mathieu Kazmierski du CRIGE et de Thomas Bekkers de la Région Sud](https://www.cerema.fr/system/files/documents/newsletter/2018/Cerema_Signature66_Def2_1.pdf)
 
 ---
 ## Portails des collectivités
@@ -100,7 +104,7 @@ Il ne permet d'accéder qu'à des données ouvertes spatialisées, à savoir ré
 
 [![](https://cdn-images-1.medium.com/max/800/1*BaP37ooj9uhcpP1Hm5AA8g.gif)](https://docs.google.com/spreadsheets/d/1-0qBnEfwBrq8Lfj0WCl4G7V3uL9lVHDDCpsH8VXc1_M/edit#gid=0)
 
-`r icon::fa("readme", size = 1)` [Lire l'article "Qui a ouvert quoi ?"](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)
+`r fa("readme", width = "1em")` [Lire l'article "Qui a ouvert quoi ?"](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)
 
 ---
 
@@ -114,7 +118,7 @@ Au mois de Septembre 2018, Google a ouvert un moteur de recherche de jeux de don
 
 <center><img src=https://searchengineland.com/figz/wp-content/seloads/2018/09/datasetsearch-800x308.png width=50%></img></center>
 
-`r icon::fa("readme", size = 1)` [Lire les réactions sur le forum teamopendata](https://teamopendata.org/t/google-dataset-search/742/4)
+`r fa("readme", width = "1em")` [Lire les réactions sur le forum teamopendata](https://teamopendata.org/t/google-dataset-search/742/4)
 
 ---
 class: center, middle, inverse
@@ -208,17 +212,21 @@ Sur le site de l'INSEE (Institut National de la Statistique et des Études Écon
 
 ---
 ## Risques
+<!--
 <center>
 <img src="https://www.georisques.gouv.fr/viewer/style/default/images/splash-screen-loading.gif" width=30%></img>
 </center>
+-->
 
 [GeoRisques](http://www.georisques.gouv.fr/) est le portail sur les risques du Ministère de l'Écologie. Il permet d'accéder aux périmètres des zones sujettes aux risques d'incendie, de feux de forêt, de submersion marine, séismes...
 
 ---
 ## Urbanisme
+<!--
 <center>
 <img src="https://www.geoportail-urbanisme.gouv.fr/bundles/igngpu/images/Logo-GeoUrba-HD.jpg?v3.2.14" width=30%></img>
 </center>
+-->
 
 Le [GéoPortail de l'Urbanisme (GPU)](https://www.geoportail-urbanisme.gouv.fr/) est la plate-forme du Ministère qui héberge toutes les données relatives aux Plans Locaux d'Urbanisme (PLU).
 
@@ -249,8 +257,10 @@ On y trouve par exemple les perimètres de bassins versants, les concentrations 
 ---
 
 ## Littoral
+<!--
 <center><img src="http://www.geoinformations.developpement-durable.gouv.fr/local/cache-vignettes/L170xH170/rubon633-49ed7.png" width=20%></img>
 </center>
+-->
 
 
 [Géolittoral](http://www.geolittoral.developpement-durable.gouv.fr/) est une plate-forme de données géographiques alimentée par le Ministère de l'Écologie où l'on trouve, entre autres, le tracé du sentier du littoral, les ouvrages et aménagements littoraux, ...
