@@ -1,0 +1,70 @@
+---
+title: "OpenData (Exos)"
+subtitle: "#DatavizChallenge"
+author: "CEREMA Med > Mathieu Rajerison"
+date: "<span style='font-size:0.5em;'>06/02/2019</span>"
+output:
+  xaringan::moon_reader:
+    css: ["../css/my_css.css", "../css/my_css_session2.css", "default", "default-fonts"]
+    seal: true
+    lib_dir: libs
+    self_contained: false
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
+class: center, middle, inverse
+
+# `r fa("pencil-alt", width = "1em")` À vous de jouer
+
+---
+class: center, middle
+
+#Prendre le tableau des populations à Aix en Provence, Marseille et Nice : quelles formes graphiques pourriez-vous utiliser pour la représenter visuellement ?
+
+---
+class: center, middle
+
+#Dessiner à la main un graphique de la population sur ces trois villes sous la forme de :
+
+Barres
+
+Camemberts
+
+---
+class: center, middle
+
+#Quel avantage voyez-vous pour les graphiques par rapport au tableau ?
+
+---
+class: center, middle
+
+#Que préférez-vous : les barres ou camemberts ? Pourquoi ?
+
+---
+class: center, middle
+
+# Créer un tableau contenant l'évolution de la population d'Aix en Provence :
+
+1968 : 89566 habitants
+
+1975 : 110659
+
+1990 : 123842
+
+1999 : 134324 
+
+2007 : 143404 
+
+_Repérer le minimum et le maximum, les arrondir au millier_
+
+---
+class: center, middle
+
+# Créer un graphique qui rende compte de l'évolution de la population

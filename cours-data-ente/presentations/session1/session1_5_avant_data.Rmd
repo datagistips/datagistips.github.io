@@ -14,6 +14,10 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 <!-- !! http://eduscol.education.fr/sti/sites/eduscol.education.fr.sti/files/ressources/pedagogiques/693/693-isn-opendatadocument-ressource-prof.pdf -->
 <!-- !! licence ou licence ? -->
@@ -22,21 +26,38 @@ class: center, middle, inverse
 
 # Le bestiaire des données
 
-`r icon::fa("sticker-mule", size = 4)` 
+`r fa("sticker-mule", width = "4em")` 
 
 Le biotope des données comprend des individus assez particuliers
 
 ---
 class: middle, center
 
-# Trouvez sur Internet les définitions de : 
-- donnée brute, donnée enrichie
-- données pivot
-- donnée chaude, donnée froide
-- donnée fraîche
-- donnée géographique
-- donnée d'intérêt général
-- données souveraines
+# Faîtes correspondre
+.pull-left[
+1. Donnée brute
+- Donnée enrichie
+- Données pivot
+- Donnée chaude
+- Donnée froide
+- Donnée fraîche
+- Donnée géographique
+- Donnée d'intérêt général
+- Données souveraines
+]
+
+.pull-right[
+1. Donnée mise à jour fréquemment
+2. Donnée mise à jour peu fréquemment
+- Donnée avec des référénces spatiales (localisation)
+- Donnée support à la puissance publique
+- Donnée originelle, proche de la source
+- Donnée détenue par le privé produite dans le cadre d'une mission de service public, par exemple par délégation
+- Donnée récente
+- Donnée issue du croisement de plusieurs données
+- Donnée servant à identifier des territoires, des sociétés, utilisées lors de jointures entre jeux de données
+]
+
 
 ---
 
@@ -96,11 +117,11 @@ Une donnée chaude doit donc être **fréquemment actualisée**
 Une donnée est dite "fraîche" si elle est **récente**.
 
 ---
-`r icon::fa("exclamation-triangle", size = 1)` Attention aux confusions donnée froide = donnée fraîche. 
+`r fa("exclamation-triangle", width = "1em")` Attention aux confusions donnée froide = donnée fraîche. 
 
 Il est fréquent qu'une donnée soit récente car ses valeurs sont enregistrées férquemment dans le temps (donnée non stationnaire). Une donnée peut donc être fraîche tout en étant chaude. 
 
-`r icon::fa("lightbulb", size = 1)` Un moyen mnémotechnique pour ne pas associer systématiquement frais et froid : *un plat chaud peut être réalisé avec des produits frais*.
+`r fa("lightbulb", width = "1em")` Un moyen mnémotechnique pour ne pas associer systématiquement frais et froid : *un plat chaud peut être réalisé avec des produits frais*.
 
 ---
 
@@ -130,7 +151,7 @@ Elle se trouve souvent sous des formats spécifiques qui encodent la géométrie
 class: center, middle, inverse
 # La forme
 
-`r icon::fa("file", size = 4)` 
+`r fa("file", width = "4em")` 
 ---
 
 ## Fichiers plats
@@ -175,12 +196,32 @@ class: center, middle, inverse
 
 # Les formats
 
-`r icon::fa("copy", size = 4)` 
+`r fa("copy", width = "4em")` 
 
 ---
-class: center, middle, inverse
+class: center, middle
 
-# Citez quelques formats que vous connaissez. Lesquels vous semblent être des formats de données ?
+## Dîtes si ces formats sont des formats de données
+
+- mp3
+- csv
+- avi
+- xls
+- jpeg
+- tif
+- shp
+- ods
+- sqlite
+
+---
+class: center, middle
+
+## Classez ces formats de données par ordre de préférence
+
+- ods
+- csv
+- xls
+- pdf (?)
 
 ---
 ## Formats courants
@@ -234,13 +275,7 @@ class: center, middle, inverse
 
 # Les licences
 
-`r icon::fa("lock-open", size = 4)` 
-
----
-class: center, middle
-
-# Peut-on partager et reproduire gratuitement de la musique ou des films ? Pourquoi ?
-# Connaissez-vous des oeuvres que l'on peut télécharger et exploiter librement ?
+`r fa("lock-open", width = "4em")` 
 
 ---
 ## De la fermeture au partage, du partage à l'ouverture
@@ -279,24 +314,24 @@ La licence ODbL est comparable à la licence CC-BY-SA (Creative Commons, Paterni
 
 ### Pourquoi contaminante ? 
 
-Prenons un exemple :
-
-Actuellement, l'IGN diffuse à des tiers de façon payante<sup>*</sup> sa carte des bâtis (maisons, immeubles,...). Ces données sont donc propriétaires. 
+![](../images/osm.png)
 
 Les données OpenStreetMap sont très riches et des utilisateurs agrémentent fréquemment la carte avec de nouveaux bâtiments. Les données OSM sont en licence ODbL
 
-Si l'IGN souhaite agrémenter son relevé des emprises des bâtiments en intégrant pour partie des données issues d'OpenStreetMap, il devra reverser en retour l'intégralité de sa base sous les conditions de diffusion d'OSM, soit sous la même licence ODbL.
+`r fa("question", width = "1em")` Si Google souhaite intégrer une zone d'activité recensée dans OpenStreetMap mais pas dans Google Maps, que se passe-t-il ?
 
-Les données IGN seraient couvertes de facto par la licence ODbL.
+---
 
-`r icon::fa("question", size = 1)` Et si Google Maps intégrait des données issues d'OSM, quel impact cela pourrait-il avoir ?
+Les données Google seraient couvertes de facto par la licence ODbL.
 
-.footer-note[[*] Sauf pour les institutions publiques]
+![](../images/google2.png)
+
+
 ---
 class: center, middle, inverse
 # Le ventre de la data
 
-`r icon::fa("table", size = 3)` 
+`r fa("table", width = "3em")` 
 
 ### Quand on ouvre un fichier de données, on découvre dedans une structure rigoureuse, tabulaire avec des valeurs de différents types
 

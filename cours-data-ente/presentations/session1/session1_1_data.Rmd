@@ -32,7 +32,7 @@ Notre quotidien est baigné par les données.
 
 --
 
-- Dans la spère *professionnelle*, nous échangeons des courriels, exploitons des documents, des tableaux, remplissons des formulaires sur applications web métier.
+- Dans la sphère *professionnelle*, nous échangeons des courriels, exploitons des documents, des tableaux, remplissons des formulaires sur applications web métier.
 
 ---
 class: center, middle
@@ -196,7 +196,7 @@ Les **algorithmes** sont des séquences ordonnées d'opérations informatiques. 
 ---
 class: center, middle
 
-# Par quelles une frite arrive-t-elle dans votre assiette ?
+# Par quelles étapes une frite arrive-t-elle dans votre assiette ?
 
 ---
 
@@ -248,7 +248,7 @@ class: center, middle, inverse
 ---
 class: center, middle
 
-#Citez quelques objets connectés
+# Citez quelques objets connectés que vous possédez
 
 ---
 ## Les objets connectés
@@ -302,7 +302,7 @@ class: center, middle, inverse
 ---
 class: center, middle
 
-#A votre avis, quelles données transmettez-vous, parfois à votre insu ?
+# Quelles informations personnelles peut transmettre un utilisateur d'internet ?
 
 ---
 
@@ -348,7 +348,7 @@ Les GAFA et BATX en tirent bénéfice en **personnalisant** les pubs que nous re
 ---
 class: center, middle
 
-#A votre avis, quel avantage peut avoir un gouvernement ou une société à ouvrir ses données ?
+#A votre avis, quel avantage peut tirer un gouvernement ou une société de l'ouverture de ses données ?
 
 ---
 

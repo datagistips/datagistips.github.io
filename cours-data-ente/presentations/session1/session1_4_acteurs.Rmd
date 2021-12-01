@@ -14,13 +14,19 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
 # Structures de l'État
 
-`r icon::fa("flag", size = 4)` 
+`r fa("flag", width = "4em")` 
 
 ---
+## L'État et l'open
+
 L'État investit beaucoup le champ de l'*Open*, notamment du logiciel libre (Open Source) et de la donnée ouverte (Open Data), afin de souscrire à certains engagements et obligations règlementaires (pour rappel, la loi Lemaire pour une République Numérique et la participation à l'OGP).
 
 ---
@@ -91,7 +97,7 @@ class: center, middle, inverse
 
 # Associations et citoyenneté
 
-`r icon::fa("people-carry", size = 4)` 
+`r fa("people-carry", width = "4em")` 
 
 ---
 
@@ -129,7 +135,7 @@ class: center, middle, inverse
 
 # Data-Journalisme
 
-`r icon::fa("pen-square", size = 4)` 
+`r fa("pen-square", width = "4em")` 
 
 ---
 Le [journalisme de données](https://fr.wikipedia.org/wiki/Journalisme_de_donn%C3%A9es) (data journalism en anglais), ou journalisme de bases de données (database journalism), est un mouvement visant à renouveler le journalisme par l'exploitation de données statistiques et la mise à la disposition de celles-ci au public.
@@ -153,7 +159,7 @@ Certains journaux en ligne essaient de se [démarquer](https://www.informationis
 class: center, middle, inverse
 # "Monsieur-tout-le-monde"
 
-`r icon::fa("male", size = 4)` 
+`r fa("male", width = "4em")` 
 ---
 Des citoyens se saisissent des données mises à disposition afin de créer des analyses ou des visualisations originales.
 
@@ -172,7 +178,7 @@ Ainsi, l'utilisateur Mathieu Garnier s'intéresse-t-il dans ses articles :
 class: center, middle, inverse
 # Les entreprises
 
-`r icon::fa("building", size = 4)` 
+`r fa("building", width = "4em")` 
 
 ---
 Enfin, des sociétés puisent dans l'OpenData afin de proposer une gamme de services visant :

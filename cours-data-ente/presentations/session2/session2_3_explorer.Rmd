@@ -72,6 +72,8 @@ class: exo
 ##Exo 4
 &#9658; <u>Revue post-téléchargement</u>
 
+Vous venez de télécharger les données. Faisons quelques petits contrôles :
+
 1. Combien de fichiers trouve-t-on dans le lot de données et sous quel format sont-ils ?
 
 --
@@ -122,6 +124,8 @@ class:exo
 ##Exo 6
 &#9658; <u>Contenu</u>
 
+Votre cheffe vous pose quelques questions, pour préparer la réunion :
+
 1. PACA est-elle une région bruyante ?
 <!-- 34.1 vs 14.2 -->
 
@@ -136,8 +140,7 @@ class: exo
 
 ## Exo 7
 
-&#9658; `r fa("file", width = "1em")` Pour le jeu de données sur les indicateurs d'épanouissement, Trouver le fichier qui contient la documentation associée au jeu de données et répondre à ces questions
- et répondre à ces questions :
+Roger, un expert de l'environnement, très pointu sur la qualité de l'air, vous pose quelques questions pièges lors de cette réunion :
 
 - volet **Bruit**
   1. Les niveaux de bruit sont-ils relevés par mesure locale ou calculés grâce à des modèles numériques ? 

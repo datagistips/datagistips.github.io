@@ -16,8 +16,11 @@
 - [Énoncé du défi](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_1_énoncé.html)
 - [Accéder à la donnée et en prendre connaissance](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_2_acceder_prendre_connaissance.html)
 - [Explorer](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_3_explorer.html)
+
+- [#DatavizChallenge](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_4_0_datavizChallenge.html)
 - [Visualiser](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_4_visualiser.html)
 - [Cartographier](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_5_cartographier.html)
+
 - [Outils (annexe)](https://datagistips.github.io/cours-data-ente/presentations/session2/session2_6_annexe_outils.html)
 
 ## Licence

@@ -26,11 +26,7 @@ class: center, middle, inverse
 class: exo
 ## Exo 1
 
-&#9658; Partez à la recherche du jeu de données (datasets) sur DataSud :
-
-- `r fa("file", width = "1em")` des indicateurs de développement durable portant sur les déplacements, la qualité de l'air, l'exposition au bruit
-
-Et décrire le contenu de la page.
+&#9658; Partez à la recherche d'un jeu de données (datasets) sur DataSud sur `r fa("file", width = "1em")` les indicateurs de développement durable portant sur les déplacements, la qualité de l'air, l'exposition au bruit
 
 ---
 ### Réponse :
@@ -42,6 +38,10 @@ class: center, middle, inverse
 ### Tâter, lire le terrain
 
 `r fa("book-reader", width = "3em")`
+
+---
+class: center, middle, inverse
+# Quelles questions posez-vous à quelqu'un que vous venez de rencontrer ?
 
 ---
 
@@ -76,7 +76,7 @@ class: exo
 
 ## Exo 2
 
-&#9658; `r fa("file", width = "1em")` Pour ce jeu de données, répondre aux questions suivantes :
+&#9658; `r fa("file", width = "1em")` Pour ce jeu de données, les premières questions à se poser sont les suivantes :
 
 1. Qui est l'**auteur** de la donnée ? Semble-t-il être de confiance ? Si j'ai une question à poser sur cette donnée, qui contacter ? (Question *qui*)
 

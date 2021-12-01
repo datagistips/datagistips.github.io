@@ -15,12 +15,16 @@ output:
       countIncrementalSlides: false
 
 ---
+```{r load_packages, message=FALSE, warning=FALSE, include=FALSE} 
+library(fontawesome)
+```
+
 class: center, middle, inverse
 
-# `r icon::fa("pencil-alt", size = 1)` À vous de jouer
+# `r fa("pencil-alt", width = "1em")` À vous de jouer
 
 ---
-class: center, middle
+class: middle
 
 # Créer un tableau depuis les instructions suivantes :
 
@@ -29,18 +33,12 @@ class: center, middle
 - Nice (06088) est une commune des Alpes-Maritimes. Elle compte 343304 habitants.
 
 ---
-class: center, middle
-
-# Récupérer la population par département sur la région PACA et en faire un tableau en faisant apparaître également le code INSEE de chaque département
-
----
-class: center, middle
+class: middle
 
 # Quelle caractéristique de l'OpenData peut influencer la façon de structurer la donnée ?
 
 --
-Voici les consignes de réalisation d'un tableau pour que ce dernier soit traitable par une machine :
 
-- Souvent, un logiciel s'attend à ce qui est le plus conventionnel, soit que les variables, champs apparaissent en colonnes, et les entités, enregistrements, en lignes
-- Noms de champs courts, voire abréviés, pour faciliter le travail des programmeurs
-- Pas d'espaces, ni d'accents dans les noms d'attributs, ni de majuscules, sinon les logiciels de traitement peuvent planter
+- Souvent, un logiciel s'attend à ce qui est le plus conventionnel, soit que les variables, champs apparaissent en **colonnes**, et les entités, enregistrements, en **lignes**
+- Noms de champs courts, voire **abréviés**, pour faciliter le travail des programmeurs
+- **Pas d'espaces**, **ni d'accents** dans les noms d'attributs, sinon les logiciels de traitement peuvent planter

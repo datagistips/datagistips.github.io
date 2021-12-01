@@ -21,7 +21,15 @@ library(fontawesome)
 # Feuille de route
 L'environnement et notre espace de vie nous intéressent particulièrement.
 
-Afin d'analyser leur état en région PACA, nous allons tenter d'accéder, sur le portail DataSud à des données relatives à la **qualité de l'air**, le **bruit** et la **pollution** afin de les analyser.
+Vous êtes invités à une réunion pour parler de l'environnement en PACA, notamment sur les volets **qualité de l'air**, le **bruit** et la **pollution**, et il est attendu de vous des éléments factuels bien illustrés.
+
+--
+
+- Quelles sont les différentes étapes d'investigation ?
+
+--
+
+- Sur quel(s) portail(s) iriez-vous chercher des informations ou données ?
 
 ---
 # Les étapes
