@@ -129,7 +129,7 @@ https://www.lemonde.fr/archeologie/article/2017/08/29/les-mesopotamiens-as-de-la
 - **Internet** et la corrélation des savoirs, qu'illustre le web (*toile* en français), sont nées de cette révolution technologique.  
 <!-- https://royal.pingdom.com/2008/04/08/the-history-of-computer-data-storage-in-pictures/ -->
 
-<center><a data-flickr-embed="true"  href="https://www.flickr.com/photos/jurvetson/916142" title="Internet Splat Map"><img src="https://farm1.staticflickr.com/1/916142_ddc2fd0140.jpg" width="500" height="375" alt="Internet Splat Map"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script></center>
+<center><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Internet_map_1024.jpg/1024px-Internet_map_1024.jpg width="60%"></center>
 
 ---
 class: center, middle, inverse

@@ -8,7 +8,7 @@ output:
     css: ["../css/my_css.css", "../css/my_css_session1.css", "default", "default-fonts"]
     seal: true
     lib_dir: libs
-    self_contained: false
+    self_contained: true
     nature:
       highlightStyle: github
       highlightLines: true
@@ -92,7 +92,9 @@ Il ne permet d'accéder qu'à des données ouvertes spatialisées, à savoir ré
 
 ### Recensement réalisé par Datactivist
 
-[![](https://cdn-images-1.medium.com/max/800/1*BaP37ooj9uhcpP1Hm5AA8g.gif)](https://docs.google.com/spreadsheets/d/1-0qBnEfwBrq8Lfj0WCl4G7V3uL9lVHDDCpsH8VXc1_M/edit#gid=0)
+![](../images/datactivist.gif)
+
+[Le recensement](https://docs.google.com/spreadsheets/d/1-0qBnEfwBrq8Lfj0WCl4G7V3uL9lVHDDCpsH8VXc1_M/edit#gid=0)
 
 `r fa("readme", width = "1em")` [Lire l'article "Qui a ouvert quoi ?"](https://medium.com/datactivist/qui-a-ouvert-quoi-le-recensement-des-donn%C3%A9es-des-villes-est-maintenant-ouvert-b7f697135c1f)
 
