@@ -1,1 +1,0 @@
-[Covid, geometry generators et carto-geekeries](covid-geometry-generators-cartogeekeries.pdf)
